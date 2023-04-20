@@ -19,6 +19,7 @@ id INT AUTO_INCREMENT,
 id_pieza INT ,
 id_proveedor CHAR(4),
 precio INT,
+PRIMARY KEY(id),
 CONSTRAINT id_pieza 
 FOREIGN KEY (id_pieza) REFERENCES piezas (codigo)
 ON DELETE CASCADE ON UPDATE CASCADE,

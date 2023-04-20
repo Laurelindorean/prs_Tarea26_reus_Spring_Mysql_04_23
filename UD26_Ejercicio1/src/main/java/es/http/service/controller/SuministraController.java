@@ -39,26 +39,26 @@ public class SuministraController {
 		return suministraServiceImp.guardar(suministra);
 	}
 
-	@GetMapping("/suministra/{codigoPieza}")
-	public Suministra proveedorXID(@PathVariable(name = "codigoPieza") int codigoPieza) {
+	@GetMapping("/suministra/{codigo}")
+	public Suministra proveedorXID(@PathVariable(name = "codigo") int codigo) {
 		Suministra suministra_xid = new Suministra();
-		suministra_xid = suministraServiceImp.suministraXID(codigoPieza);
+		suministra_xid = suministraServiceImp.suministraXID(codigo);
 		return suministra_xid;
 	}
 
-	@PutMapping("/suministra/{codigoPieza}")
-	public Suministra actualizarSuministra(@PathVariable(name = "codigoPieza") int codigoPieza, @RequestBody Suministra suministra) {
+	@PutMapping("/suministra/{codigo}")
+	public Suministra actualizarSuministra(@PathVariable(name = "codigo") int codigo, @RequestBody Suministra suministra) {
 		Suministra suministra_selec = new Suministra();
-		suministra_selec = suministraServiceImp.suministraXID(codigoPieza);
+		suministra_selec = suministraServiceImp.suministraXID(codigo);
 		suministra_selec.setPrecio(suministra.getPrecio());
 		suministra_selec.setPieza(suministra.getPieza());
 		suministra_selec.setProveedor(suministra.getProveedor());
 		return suministraServiceImp.actualizarSuministra(suministra_selec);
 	}
 
-	@DeleteMapping("/suministra/{codigoPieza}")
-	public void eliminarSuministra(@PathVariable(name = "codigoPieza") int codigoPieza) {
-		suministraServiceImp.eminiarSuministra(codigoPieza);
+	@DeleteMapping("/suministra/{codigo}")
+	public void eliminarSuministra(@PathVariable(name = "codigo") int codigo) {
+		suministraServiceImp.eminiarSuministra(codigo);
 	}
 
 }
