@@ -42,7 +42,7 @@ public class PiezaServiceImp implements IPiezaService {
 	}
 
 	@Override
-	public void eminiarPieza(int id) {
+	public void eliminarPieza(int id) {
 		iPiezaDAO.deleteById(id);
 
 	}

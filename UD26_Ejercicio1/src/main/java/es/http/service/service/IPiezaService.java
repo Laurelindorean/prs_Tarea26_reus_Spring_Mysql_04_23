@@ -22,6 +22,6 @@ public interface IPiezaService {
 
 	public Pieza actualizarPieza(Pieza pieza);
 
-	public void eminiarPieza(int id);
+	public void eliminarPieza(int id);
 
 }

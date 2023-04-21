@@ -56,7 +56,7 @@ public class PiezaController {
 
 	@DeleteMapping("/piezas/{codigo}")
 	public void eliminarPieza(@PathVariable(name = "codigo") int codigo) {
-		piezaServiceImp.eminiarPieza(codigo);
+		piezaServiceImp.eliminarPieza(codigo);
 	}
 
 }
